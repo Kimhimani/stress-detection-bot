@@ -1,0 +1,913 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day","Hi"],
+     "responses": ["Hello there. I am Chattie. How can I be of help?", "Hi there, I am Chattie. How can I be of help?"],
+     "context": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+     "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+     "context": [""]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure"],
+     "context": [""]
+    },
+    {"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
+    },
+    {
+     "tag": "options",
+     "patterns": [
+     "How could you help me?",
+     "I feel burnt out", 
+     "I feel stressed",
+     "What can you do?", 
+     "What help do you provide?", 
+     "How can you be helpful?", 
+     "What support is offered?", 
+     "Can you help with mental health?", 
+     "What kind of assistance do you offer?", 
+     "How do you help with depression?", 
+     "What problems can you solve?", 
+     "Can you guide me if I feel stressed?", 
+     "Can you detect emotional issues?", 
+     "Can you support me with my feelings?", 
+     "How can you assist with stress?"
+        ],
+        "responses": [
+          "I can help you detect whether you are stressed, depressed, or just a little tired.",
+          "I can assist you in understanding your emotions better and provide helpful suggestions.",
+          "I can help you detect Depression if you have it and guide you to seek proper support.",
+          "I am here to listen and help you figure out ways to manage stress or sadness.",
+          "I can provide insights into your emotional state based on our conversation.",
+          "I can guide you toward self-care and mental wellness practices.",
+          "I am here to support you by identifying signs of stress, anxiety, or depression.",
+          "I can suggest ways to feel better and cope with challenges in a healthier way.",
+          "I aim to offer understanding and a pathway to address emotional well-being.",
+          "I can support you by identifying patterns in your feelings and offering guidance."
+        ],
+        "context": [""]
+    },
+  
+    {
+        "tag": "depression",
+        "patterns": [
+          "How can I detect depression?", 
+          "How do I know the difference between stress and depression?", 
+          "How do I know if I have depression?", 
+          "Depression", 
+          "What are the signs of depression?", 
+          "How do I tell if I'm depressed?", 
+          "Can you help me identify depression?", 
+          "What are the symptoms of depression?", 
+          "Am I just sad or is it depression?", 
+          "How can I differentiate stress from depression?", 
+          "What are the early signs of depression?", 
+          "How do I know if my sadness is serious?", 
+          "What should I look out for in depression?", 
+          "Can you tell if I might be depressed?", 
+          "What causes depression?", 
+          "How can I recognize depression in myself?"
+        ],
+        "responses": [
+          "I can be of help here.",
+          "I can guide you in identifying potential signs of depression.",
+          "Depression can show itself in various ways, and I can help you recognize its symptoms.",
+          "If you're unsure whether you're dealing with depression, we can figure it out together.",
+          "Let's discuss what you're feeling to see if it might be depression.",
+          "I can help you understand the difference between stress and depression.",
+          "Depression can sometimes feel like prolonged sadness or lack of interest. Let's explore your emotions.",
+          "By answering a few questions, I can help you get a clearer understanding of your mental state.",
+          "Recognizing depression is an important first step, and I'm here to assist you.",
+          "I can provide insights and help you identify if you're experiencing depression or just a tough phase.",
+          "Let's work together to understand your emotions better and assess if depression might be affecting you.",
+          "If you suspect you might be depressed, I can guide you on what to do next."
+        ],
+        "context": [""]
+    },
+      
+    {
+        "tag": "askpatterns",
+        "patterns": [
+          "Ok",
+          "Sure",
+          "Alright",
+          "Yes",
+          "Go ahead",
+          "Tell me more",
+          "I am ready",
+          "Let’s start",
+          "Continue",
+          "I am listening",
+          "What’s next?"
+        ],
+        "responses": [
+          "Is your appetite normal?",
+          "Are you feeling tired or fatigued more than usual?",
+          "Have you been sleeping well lately?",
+          "Do you feel more stressed than usual?",
+          "Have you noticed any changes in your mood?",
+          "Do you feel less interested in things you usually enjoy?",
+          "Have you experienced difficulty concentrating?",
+          "Are you feeling more irritable or restless?",
+          "How are your energy levels these days?",
+          "Do you feel like your emotions are harder to manage?"
+        ],
+        "context": [""]
+    },
+      
+    {
+        "tag": "yesappetite",
+        "patterns": [
+          "Yes, I eat well",
+          "I eat",
+          "I have no issues",
+          "I haven't lost my appetite",
+          "My appetite is normal",
+          "I eat regularly",
+          "No problems with eating",
+          "I feel hungry as usual",
+          "Eating isn't an issue for me",
+          "I have a healthy appetite"
+        ],
+        "responses": [
+          "That's great! Do you have any issues with drinking?",
+          "Good to hear! How about staying hydrated?",
+          "Wonderful! Do you experience any discomfort while eating or drinking?",
+          "I'm glad to know! How about your overall hydration?",
+          "It's great that your appetite is normal! Are there any other concerns?"
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "noappetite",
+        "patterns": [
+          "No, I don't eat well",
+          "no",
+          "I can't eat",
+          "I have lost my appetite",
+          "I struggle with eating",
+          "My appetite is gone",
+          "I don't feel like eating",
+          "I have trouble eating",
+          "I eat very little",
+          "I don't feel hungry",
+          "Eating is hard for me"
+        ],
+        "responses": [
+          "Oh no! How long has this issue been going on for?",
+          "I'm sorry to hear that. Can you share how long this has been happening?",
+          "That sounds concerning. Has this been a recent change?",
+          "Losing appetite can be challenging. How often do you feel this way?",
+          "I'm here to help. How long have you been struggling with this?",
+          "Let’s look into this. Has your appetite decreased suddenly or gradually?",
+          "That must be difficult. When did you start noticing this change?",
+          "We can explore this together. Has this been affecting your energy levels too?"
+        ],
+        "context": [""]
+     },
+      
+     {
+        "tag": "howlong",
+        "patterns": [
+          "I haven't been able to eat for a few weeks now", 
+          "For a couple of months now.",
+          "It's been a few days.",
+          "For about a month.",
+          "This has been going on for weeks.",
+          "It's been happening for a long time.",
+          "For a while now.",
+          "It's been more than a month.",
+          "couple of months",
+          "few days",
+          "a month",
+          "been a while",
+          "few weeks"
+        ],
+        "responses": [
+          "Have you had any issues with drinking?",
+          "I'm sorry to hear that. Have you noticed changes in your hydration habits?",
+          "Let's explore further. Have you been drinking enough fluids?",
+          "That's concerning. Are there any issues with drinking too?",
+          "Thank you for sharing. How about your drinking habits during this time?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "yesdrinking",
+        "patterns": [
+          "I have been drinking a lot recently", 
+          "The stress makes me drink", 
+          "I feel like drinking to cope with the things going on in my life", 
+          "Drinking helps me forget my problems",
+          "I rely on drinking to manage stress",
+          "I've been drinking more than usual",
+          "I turn to alcohol when I'm stressed",
+          "I use drinking to escape my thoughts",
+          "Alcohol helps me calm down",
+          "I drink heavily to cope",
+          "yes"
+        ],
+        "responses": [
+          "Oh no! Have you been taking drugs too?",
+          "I understand. Have you also turned to drugs for coping?",
+          "Thank you for sharing. Has this led to drug use as well?",
+          "That sounds tough. Have you had any involvement with drugs?",
+          "Let's talk about this further. Have drugs also been part of your coping mechanism?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "nodrinking",
+        "patterns": [
+          "I don't drink", 
+          "I drink occasionally", 
+          "I'm good", 
+          "I don't like drinking",
+          "I rarely drink",
+          "I avoid alcohol",
+          "Drinking is not my habit",
+          "I stay away from alcohol",
+          "I only drink socially",
+          "I don't depend on drinking",
+          "no"
+        ],
+        "responses": [
+          "Oh that's good. I'm hoping you don't have issues with drugs though?",
+          "That's great to hear! Do you also stay away from drugs?",
+          "Wonderful. Are there any issues with drugs I should know about?",
+          "I'm glad to know that! How about drug use, any concerns there?",
+          "That's positive! Have drugs ever been a concern for you?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "yesdrugs",
+        "patterns": [
+          "I am addicted to drugs", 
+          "I do drugs all the time", 
+          "I smoke pot all the time", 
+          "I smoke", 
+          "I inhale",
+          "I use drugs regularly",
+          "I can't stop doing drugs",
+          "I'm dependent on drugs",
+          "I take drugs often",
+          "Drugs are part of my routine",
+          "yes"
+        ],
+        "responses": [
+          "Because of this have you had issues sleeping?",
+          "Thank you for sharing. Has this affected your sleep?",
+          "I see. Do you struggle with sleep due to this?",
+          "That's tough. How has your sleep been lately?",
+          "I understand. Has this caused problems with your sleeping patterns?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "nodrugs",
+        "patterns": [
+          "I am not addicted to drugs", 
+          "I don't do drugs", 
+          "I don't like drugs", 
+          "I'm not addicted", 
+          "It's a terrible habit",
+          "I avoid drugs",
+          "no",
+          "I stay away from drugs",
+          "Drugs are not part of my life",
+          "I have no interest in drugs",
+          "I don't use any substances"
+        ],
+        "responses": [
+          "Oooh that's great! I'm hoping you don't have issues sleeping though?",
+          "That's wonderful to hear! How about your sleep? Any problems there?",
+          "I'm glad to know that! Do you sleep well?",
+          "That's really positive! How have your sleeping patterns been?",
+          "That's good news! Any difficulties with sleeping lately?"
+        ],
+        "context": [""]
+      },
+      
+      {
+        "tag": "yessleep",
+        "patterns": [
+          "Yes, I sleep well", 
+          "I sleep a lot", 
+          "Sleep pattern is normal", 
+          "I have no issues sleeping", 
+          "My sleep is fine", 
+          "I get enough sleep", 
+          "I rest properly", 
+          "No problems with sleep", 
+          "My sleep routine is consistent", 
+          "I have a healthy sleep schedule"
+        ],
+        "responses": [
+          "That's great! Do you have any issues concentrating?",
+          "Wonderful to hear! How about your ability to focus?",
+          "Good to know! Is concentrating ever an issue for you?",
+          "I'm glad your sleep is fine! Are you able to concentrate well?",
+          "That's positive! How about your focus and attention levels?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "nosleep",
+        "patterns": [
+          "I have not slept properly in a while.", 
+          "I have had issues sleeping", 
+          "I sleep very late at night", 
+          "I am unable to sleep at all", 
+          "I have trouble sleeping", 
+          "My sleep is disturbed", 
+          "I don't get enough sleep", 
+          "I find it hard to fall asleep", 
+          "My sleep schedule is messed up", 
+          "I wake up multiple times at night"
+        ],
+        "responses": [
+          "If that's the case, have you not been able to concentrate either?", 
+          "Have you had issues concentrating because of that?", 
+          "That sounds tough. Has it impacted your ability to focus?", 
+          "I'm sorry to hear that. Does this also affect your concentration?", 
+          "Let’s talk about it. Has lack of sleep impacted your focus or work?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "yesconcentrate",
+        "patterns": [
+          "I have no issues concentrating", 
+          "I am able to work properly", 
+          "I have no trouble being able to concentrate", 
+          "Even with less sleep, I am able to work normally", 
+          "It's normal", 
+          "I can focus just fine", 
+          "My concentration is good", 
+          "No problems with focusing", 
+          "I can work efficiently", 
+          "I stay focused without trouble"
+        ],
+        "responses": [
+          "That's wonderful!", 
+          "Great to hear that!", 
+          "That's a good sign!", 
+          "I'm glad to know you're doing well!", 
+          "That’s fantastic! Keep it up!"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "noconcentrate",
+        "patterns": [
+          "I have not been able to concentrate for a long time now", 
+          "I'm unable to concentrate", 
+          "I have no mood for anything", 
+          "I can't work", 
+          "I struggle to focus", 
+          "My mind keeps wandering", 
+          "I feel distracted all the time", 
+          "I can't focus on tasks", 
+          "I feel mentally drained", 
+          "Concentration has been really hard for me"
+        ],
+        "responses": [
+          "Must be awful for you. Does it leave you tired?", 
+          "That sounds challenging. Do you feel exhausted as well?", 
+          "I’m sorry to hear that. Has this also made you feel tired?", 
+          "That must be tough. Are you experiencing fatigue along with this?", 
+          "I understand. Does this leave you feeling physically or mentally tired?"
+        ],
+        "context": [""]
+      },
+      
+      {
+        "tag": "yestired",
+        "patterns": [
+          "I'm always tired", 
+          "I feel like lazing in bed all day", 
+          "I don't have the energy", 
+          "I don't feel like doing anything", 
+          "I get lazy", 
+          "Exhausted", 
+          "Drained", 
+          "Yes", 
+          "All the time", 
+          "Absolutely", 
+          "So tired"
+        ],
+        "responses": [
+          "Maybe you should try going out for walks or exercising. Would you want to try it?",
+          "That sounds tough. How about starting with short walks?",
+          "I understand. A little exercise might help boost your energy. Would you like to give it a shot?",
+          "It must be exhausting. Have you thought about going for a stroll or doing some light activity?",
+          "That can be challenging. A quick walk might be refreshing. Want to try?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "notired",
+        "patterns": [
+          "I'm never tired", 
+          "I'm always energetic", 
+          "I have lots of energy", 
+          "I have no issues doing work", 
+          "I don't feel tired", 
+          "I'm good", 
+          "No", 
+          "Not at all", 
+          "Energetic", 
+          "Always active", 
+          "Nah"
+        ],
+        "responses": [
+          "Oh that's good. So do you exercise or go for walks?",
+          "Wonderful! Do you have a regular exercise routine?",
+          "That's great to hear! Do you enjoy walking or any physical activities?",
+          "Nice! Do you have any favorite exercises or outdoor activities?",
+          "Good to know! Do you ever go for walks or hit the gym?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "yesexercise",
+        "patterns": [
+          "Yes. I go for walks", 
+          "I exercise", 
+          "I walk", 
+          "I like exercising", 
+          "I go for long walks", 
+          "Absolutely", 
+          "Of course", 
+          "Always", 
+          "Regularly", 
+          "Yep", 
+          "Yeah"
+        ],
+        "responses": [
+          "That's awesome. Exercising really clears your head. What do you like to do for fun in your own time?",
+          "Amazing! Exercise is so beneficial. What hobbies do you enjoy?",
+          "That’s great to hear! Keeping active is fantastic. What do you do to unwind?",
+          "Fantastic! Being active is such a good habit. What are your favorite hobbies?",
+          "Great! Exercise keeps the mind sharp too. What’s your go-to activity for fun?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "noexercise",
+        "patterns": [
+          "I've recently stopped exercising", 
+          "I don't like exercising anymore", 
+          "I have stopped exercising", 
+          "I have no mood to exercise", 
+          "Not anymore", 
+          "I stopped", 
+          "Nope", 
+          "Nah", 
+          "Not at all", 
+          "Haven't exercised in ages"
+        ],
+        "responses": [
+          "What did you like doing for fun?",
+          "I understand. What other hobbies do you enjoy?",
+          "That's okay. What do you usually do to relax?",
+          "No worries! What activities do you find enjoyable?",
+          "It's all right to take a break. What do you do to pass the time?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "hobbies",
+        "patterns": [
+          "Reading", 
+          "Baking", 
+          "Painting", 
+          "Cycling", 
+          "Badminton", 
+          "Tennis", 
+          "Jumping", 
+          "Drawing", 
+          "Sketching", 
+          "Writing", 
+          "Running", 
+          "Adventures", 
+          "Coding", 
+          "Partying", 
+          "Reading books", 
+          "Cooking", 
+          "Gaming", 
+          "Gardening", 
+          "Dancing", 
+          "Swimming", 
+          "Music", 
+          "Photography", 
+          "Traveling", 
+          "Crafting", 
+          "Pottery", 
+          "Hiking", 
+          "Yoga"
+        ],
+        "responses": [
+          "I'd love to try them out too someday.",
+          "That sounds like so much fun!",
+          "Amazing hobby! Keep it up!",
+          "That's a great way to spend your time.",
+          "Sounds like something I'd enjoy too!"
+        ],
+        "context": [""]
+      },
+      
+      {
+        "tag": "workfamprobs",
+        "patterns": [
+          "That's cool", 
+          "That'll be fun", 
+          "Sounds great", 
+          "Interesting", 
+          "Cool", 
+          "Nice", 
+          "Okay", 
+          "Alright", 
+          "Sure", 
+          "Yeah"
+        ],
+        "responses": [
+          "Have you had any issues at work?", 
+          "Do you have any work-related problems?", 
+          "How are things at work? Any issues?", 
+          "Have you been facing any challenges at work?", 
+          "Is everything okay at work?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "work",
+        "patterns": [
+          "I have problems at work", 
+          "I have issues at work", 
+          "I don't feel like going to work", 
+          "I don't want to go to work", 
+          "I don't like going to work", 
+          "I'm having issues with my colleagues", 
+          "I'm having trouble connecting with colleagues", 
+          "Work is stressful", 
+          "Work is hard", 
+          "My job is exhausting", 
+          "Yes, work issues"
+        ],
+        "responses": [
+          "Have you talked to anybody about it?", 
+          "Have you tried speaking to somebody about it?", 
+          "That sounds tough. Have you discussed it with anyone?", 
+          "Have you sought advice from someone about it?", 
+          "Have you opened up to someone at work or outside about it?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "yesworkprob",
+        "patterns": [
+          "I have spoken to my colleagues about it", 
+          "I have spoken to HR about it", 
+          "I have spoken to my manager about it", 
+          "Yes, I talked about it", 
+          "Yes, I addressed it", 
+          "I brought it up", 
+          "I discussed it", 
+          "Yes, I spoke to someone", 
+          "Yes, I shared it", 
+          "I mentioned it",
+          "yes"
+        ],
+        "responses": [
+          "Have you had any issues with your family?", 
+          "How about at home? Any family-related concerns?", 
+          "Is everything okay with your family?", 
+          "Have you been facing any family-related challenges?", 
+          "How are things at home? Any problems there?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "family",
+        "patterns": [
+          "I have issues with my family", 
+          "I have trouble at home", 
+          "I don't like staying at home", 
+          "I don't like coming home", 
+          "I have issues with my parents", 
+          "My parents are getting divorced", 
+          "I fight with my siblings a lot", 
+          "I am having issues with my spouse", 
+          "Home is stressful", 
+          "Family problems",
+          "yes", 
+          "Yes, family issues"
+        ],
+        "responses": [
+          "Have you talked to anybody about it?", 
+          "Have you tried speaking to somebody about it?", 
+          "Have you shared this with anyone?", 
+          "Have you opened up about it to someone?", 
+          "Have you sought help or advice from someone about it?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "yesfamprob",
+        "patterns": [
+          "I have spoken to my father about it", 
+          "I have spoken to my mother about it", 
+          "I have spoken to my parents about it", 
+          "I have spoken to my sibling", 
+          "I have spoken to my brother", 
+          "I spoke to my sister", 
+          "Yes, I discussed it", 
+          "Yes, I shared it", 
+          "Yes, I talked about it", 
+          "Yes, I mentioned it"
+        ],
+        "responses": [
+          "Oh that's good. Have you had any issues with your friends?", 
+          "That's a start. How about your friends? Any concerns there?", 
+          "Good. Have you been facing any challenges with your friends?", 
+          "That's a positive step. Are you okay with your friends?", 
+          "Great. Do you have any friendship-related concerns?"
+        ],
+        "context": [""]
+      },
+      
+   
+      {
+            "tag": "friends",
+            "patterns": [
+                "I've been having issues with my friends",
+                "I've been having trouble keeping in touch with my friends",
+                "I don't like my friends anymore",
+                "My friends don't understand me",
+                "I feel left out in my friend group",
+                "I'm losing touch with my friends"
+            ],
+            "responses": [
+                "Have you talked to anybody about it?",
+                "Have you tried speaking to somebody about it?",
+                "Maybe talking to your friends could help.",
+                "Have you told them how you feel?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "yesfriendsprob",
+            "patterns": [
+                "I have spoken to my best friend about it",
+                "I have spoken to my other friends about it",
+                "Yes, I discussed it with my friends",
+                "I shared my feelings with them"
+            ],
+            "responses": [
+                "Do you have any relationship issues?",
+                "Has this affected your relationship with others?",
+                "How about your other relationships?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "relationships",
+            "patterns": [
+                "I've been having issues with my boyfriend",
+                "I have been having issues with my girlfriend",
+                "I have problems with my partner",
+                "I'm struggling in my relationship"
+            ],
+            "responses": [
+                "Have you talked to anybody about it?",
+                "Have you tried speaking to somebody about it?",
+                "Talking openly with your partner might help.",
+                "Have you considered couple's counseling?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "yesspeakingsomebody",
+            "patterns": [
+                "Yes I have spoken to my friends about it",
+                "Yes I have spoken to somebody",
+                "I have spoken to someone I trust",
+                "I have talked to my therapist about it"
+            ],
+            "responses": [
+                "Has talking about it helped?",
+                "Did it improve the situation?",
+                "Has it made things better?",
+                "Did sharing your feelings help?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "nospeakingsomebody",
+            "patterns": [
+                "No I haven't spoken to somebody about it",
+                "I haven't told anyone",
+                "I don't like talking about my problems",
+                "I deal with things on my own"
+            ],
+            "responses": [
+                "Maybe speaking to someone could help.",
+                "It might lessen the burden to share.",
+                "Would you consider talking to someone?",
+                "Opening up might make a difference."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "noprobs_work",
+            "patterns": [
+                "I don't have issues with colleagues",
+                "I have no issues at work",
+                "I love work",
+                "My workplace is great",
+                "Work is going well"
+            ],
+            "responses": [
+                "That's great! Any issues at home?",
+                "Glad to hear that! How about family?",
+                "Good to know! How's everything else?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "noprobs_family",
+            "patterns": [
+                "I don't have any issues with my family",
+                "I love my family",
+                "Everything is fine at home",
+                "No problems with my family"
+            ],
+            "responses": [
+                "That's great! How about friends?",
+                "Good to hear! Any issues with friends?",
+                "Lovely! How are your friendships?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "noprobs_friends",
+            "patterns": [
+                "I don't fight with my friends",
+                "My friends are supportive",
+                "I have fun with my friends",
+                "I have no issues with friends"
+            ],
+            "responses": [
+                "That's awesome! How's your relationship?",
+                "Great to hear! Any relationship concerns?",
+                "Good to know! How about relationships?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "noprobs_relationship",
+            "patterns": [
+                "I don't have problems in my relationship",
+                "I'm not in a relationship",
+                "My relationship is great"
+            ],
+            "responses": [
+                "That's wonderful!",
+                "Good to hear!",
+                "Alright!"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "work_stress",
+            "patterns": [
+                "I'm feeling stressed at work",
+                "Work is overwhelming",
+                "I can't handle the workload",
+                "Too much pressure at work"
+            ],
+            "responses": [
+                "Have you spoken to your manager?",
+                "Taking short breaks might help.",
+                "Would you like stress management tips?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "burnout",
+            "patterns": [
+                "I feel burnt out",
+                "Work is exhausting",
+                "I'm drained from work",
+                "I want to quit due to stress"
+            ],
+            "responses": [
+                "Burnout is serious. Consider a break.",
+                "Have you talked to HR?",
+                "Would you like help recovering from burnout?"
+            ],
+            "context": [""]
+        },
+    
+    
+    {"tag":"noprobs_family",
+     "patterns": ["I don't have any issues with my family", "I love my family", "There could be no such issues"],
+     "responses": ["Families are the best support systems and I'm glad you have no problems. Do you have problems with your friends?"],
+     "context":[""]
+    },
+    {"tag":"noprobs_friends",
+     "patterns":["I don't fight with my friends", "They support me a lot", "I have fun with my friends"],
+     "responses":["Oh that's great! Do you have any relationship problems or anything?"],
+     "context":[""]
+    },
+    {"tag":"noprobs_relationship",
+     "patterns":["I don't have probelms in my relationship", "I'm not in a relationship"],
+     "responses": ["Great!"],
+     "context":[""]
+    },
+    {"tag":"talksomebody",
+     "patterns": ["Maybe I shall speak to somebody about it", "I will look into those and try talking to somebody"],
+     "responses":["Great!"],
+     "context":[""]
+    },
+    {"tag":"havetalked",
+     "patterns": ["Talking to somebody really helped", "Speaking to somebody gave me a clear perspective"],
+     "respsonses":["Great!"],
+     "context":[""]
+    },
+    {"tag":"therapist",
+     "patterns":["Could you recommend a therapist?"],
+     "responses":["I would suggest the therapsists on CureFit. They have free sessions if you want to try them out and you can change your therapist if you like. But I really do suggest that you do your hobbies and just get through this stage"],
+     "context":[""]
+    },
+    
+            {
+            "tag": "work_stress",
+            "patterns": ["I'm feeling stressed at work", "Work is overwhelming me", "I can't handle the workload", "There is too much pressure at work", "I'm stressed because of deadlines"],
+            "responses": ["It sounds like you're under a lot of pressure. Have you tried talking to your manager?", "Taking short breaks during work might help alleviate some of the stress.", "Would you like suggestions for managing workplace stress?"],
+            "context": [""]
+        },
+        {
+            "tag": "burnout",
+            "patterns": ["I feel burnt out", "I have no energy for work anymore", "Work is exhausting me", "I'm completely drained by my job", "I feel like giving up on work"],
+            "responses": ["Burnout is serious; have you considered taking a break or time off?", "Talking to HR or a trusted colleague might help.", "Would you like tips to recover from burnout?"],
+            "context": [""]
+        },
+        {
+            "tag": "team_conflict",
+            "patterns": ["I have problems with my team", "My coworkers are not supportive", "There is constant conflict in my team", "I can't get along with my colleagues", "My team doesn't cooperate"],
+            "responses": ["Have you tried having an open discussion with your team?", "A team-building activity might help improve relationships.", "Would you like to explore conflict-resolution strategies?"],
+            "context": [""]
+        },
+        {
+            "tag": "job_satisfaction",
+            "patterns": ["I'm not happy with my job", "I don't feel satisfied at work", "My job doesn't fulfill me", "I'm thinking of quitting my job", "Work doesn't feel rewarding anymore"],
+            "responses": ["Have you identified what specifically is making you unhappy?", "Would you like to explore new career opportunities?", "Talking to a mentor might help clarify your thoughts."],
+            "context": [""]
+        },
+        {
+            "tag": "work_life_balance",
+            "patterns": ["I can't balance work and personal life", "Work is taking over my personal time", "I feel like I have no time for myself", "I need help managing work and family", "Work is affecting my personal life"],
+            "responses": ["Setting boundaries at work can help maintain balance.", "Would you like tips for better time management?", "Talking to your manager about flexible hours might help."],
+            "context": [""]
+        },
+        {
+            "tag": "career_growth",
+            "patterns": ["I feel stuck in my career", "There's no growth in my current job", "I want to advance in my career", "How can I grow professionally?", "My career is stagnant"],
+            "responses": ["Have you considered upskilling or taking additional courses?", "Talking to your manager about career goals might help.", "Networking within your industry can open up opportunities."],
+            "context": [""]
+        },
+        {
+            "tag": "manager_support",
+            "patterns": ["My manager is not supportive", "I feel ignored by my boss", "I can't communicate with my manager", "My boss doesn't listen to me", "There is no support from my leadership"],
+            "responses": ["Have you tried scheduling a one-on-one discussion with your manager?", "Expressing your concerns professionally might help.", "HR might be able to mediate the situation if needed."],
+            "context": [""]
+        },
+        {
+            "tag": "job_security",
+            "patterns": ["I'm worried about losing my job", "I feel insecure in my current position", "My job feels unstable", "Is my role at risk?", "I don't feel safe in my job"],
+            "responses": ["Have there been any recent changes at your workplace?", "It might help to discuss your concerns with HR or your manager.", "Keeping your skills updated can boost job security."],
+            "context": [""]
+        },
+        {
+            "tag": "overwork",
+            "patterns": ["I'm working too many hours", "My workload is too high", "I can't manage the overtime", "I'm always staying late at work", "There is no end to my tasks"],
+            "responses": ["Prioritizing your tasks can help reduce the workload.", "Have you discussed this with your manager?", "Delegating some responsibilities might ease the burden."],
+            "context": [""]
+        },
+        {
+            "tag": "recognition",
+            "patterns": ["I don't feel valued at work", "No one appreciates my efforts", "I don't get any recognition for my work", "My contributions go unnoticed", "I feel invisible at my job"],
+            "responses": ["Would you consider discussing your achievements with your manager?", "A performance review might be a good opportunity to highlight your work.", "Would you like tips on gaining recognition at work?"],
+            "context": [""]
+        }
+    
+]
+}
